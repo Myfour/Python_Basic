@@ -25,4 +25,4 @@ print(len('中'.encode('utf-8')))
 # 第一种
 print('this %s is %s \'s website' % ('www.myfour.org', 'myfour'))
 # 第二种:字符串的format（）方法
-print('this {0} is {1} \'s website'.format('www.myfour.org','myfour'))
+print('this {0} is {1} \'s website'.format('www.myfour.org', 'myfour'))
