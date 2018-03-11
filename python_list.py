@@ -19,3 +19,23 @@ person.pop(2)
 print(person)
 person[0] = 'BestMyfour'
 print(person)
+# list中的元素 类型可以不同
+person.append(99)
+person.append(True)
+person.append(['a', 'b', 'c'])
+print(person)
+# tuple元组,一旦初始化后就不能修改可以通过索引取到其中元素，但是没有list一样的那些方法
+mytuple = ()
+mytuple2 = ('micky', 'lower', 'paker')
+print(mytuple)
+print(mytuple2)
+# tuple中若想声明只有一个元素的的元组需要在元素后加，
+Emptytuple = ('haha', )
+WrongEmptytuple = ('haha')
+print(Emptytuple)
+print(WrongEmptytuple)
+# tuple所谓的不变是指tuple的每个元素的指向不变
+changedtuple = ('a', 'b', ['c', 'd'])
+changedtuple[2][0] = 'x'
+changedtuple[2][1] = 'y'
+print(changedtuple)
