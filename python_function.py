@@ -101,3 +101,36 @@ def person(name, age, **kw):
 person('Zack', 20, sex='男', height=190)
 kw = {'size': 'L', 'hair': 'green'}
 person('Zoro', 19, **kw)
+
+
+# 命名关键字参数,指定关键字参数前需要加*
+def person1(name, age, *, size, sex):
+    print(name, age, size, sex)
+
+
+person1('show', 20, sex='nv', size='XL')
+
+
+# 参数中有可变参数也有命名关键字参数就不用额外加一个*
+def person2(name, age, *girls, size, number):
+    print(name, age, girls, size, number)
+
+
+person2('heihei', 30, 'li', 'zi', 'jian', size='XXL', number='9096')
+
+
+# 终极组合参数
+def f1(a, b, c=0, *d, **e):
+    print(a, b, c, d, e)
+
+
+f1('aa', 'bb', 3, 3, 'd', kw1='xx', k2='gg')
+
+
+def f2(a, b, c=2, *, size, **kw):
+    print(a, b, c, size, kw)
+
+
+f2(111, 222, 333, k2='k2', k3='k3', size='XXXL')
+kw = {'k2': 'k2', 'k3': 'k3'}
+f2(111, 222, 333, size="xxl", **kw)
