@@ -63,3 +63,68 @@ print(m1.getScore())
 # 双下划线开头的实例变量是不是一定不能从外部访问呢？其实也不是。不能直接访问__name是因为Python解释器
 # 对外把__name变量改成了_Student__name，所以，仍然可以通过_Student__name来访问__name变量：
 print(m1._Me__score)
+
+print('-------------------------')
+
+
+# 继承与多态
+class Animal(object):
+    def run(self):
+        print('Animal is running......')
+
+    def say(self):
+        print('Animal is say')
+
+
+class Dog(Animal):
+    def run(self):
+        print('Dog is running......')
+
+
+class Cat(Animal):
+    def say(self):
+        print('Cat is say')
+
+
+class Fish(Animal):
+    def run(self):
+        print('Fish is runing......')
+
+    def say(self):
+        print('Fish is say')
+
+
+# 俗话的鸭子类型,动态语言才有的
+class DuckLike(object):
+    def run(self):
+        print('like a duck go')
+
+
+print(Animal().run())
+print(Dog().run())
+print(Dog().say())
+print(Cat().run())
+print(Fish().run())
+print(DuckLike().run())
+
+print('------------------')
+
+# isinstance()用来判断一个对象是否使一个类的实例
+print(isinstance(Animal(), Animal))
+print(isinstance(Dog(), Animal))
+print(isinstance(Cat(), Animal))
+print(isinstance(DuckLike(), Animal))
+
+print('----------------------')
+
+
+# 多态
+def runrun(animal):
+    animal.run()
+    animal.run()
+
+
+runrun(Animal())
+runrun(Dog())
+# 继承可以把父类的所有功能都直接拿过来，这样就不必重零做起，子类只需要新增自己特有的方法，也可以把父类不适合的方法覆盖重写。
+# 动态语言的鸭子类型特点决定了继承不像静态语言那样是必须的。
