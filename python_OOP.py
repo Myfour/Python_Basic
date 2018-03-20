@@ -128,3 +128,36 @@ runrun(Animal())
 runrun(Dog())
 # 继承可以把父类的所有功能都直接拿过来，这样就不必重零做起，子类只需要新增自己特有的方法，也可以把父类不适合的方法覆盖重写。
 # 动态语言的鸭子类型特点决定了继承不像静态语言那样是必须的。
+
+# 获取对象信息
+# type()用来判断对象类型
+print('--------------')
+print(type(123))
+print(type('sdg'))
+print(type([]))
+print(type(abs))
+print('-----------------')
+# dir()获取一个对象所有的属性与方法
+# 仅仅把属性和方法列出来是不够的，配合getattr()、setattr()以及hasattr()，我们可以直接操作一个对象的状态：
+print(dir('abc'))
+print(hasattr('abc', 'upper'))
+# setattr('abc', 'y', 20)
+print(getattr('abc', 'join', 100))
+
+# 类属性
+print('======================')
+
+
+class Group(object):
+    count = 0
+
+    def __init__(self, name, size):
+        self.__name = name
+        self.__size = size
+
+
+g = Group('Titan', 20)
+print(Group.count)
+print(g.count)
+print(g._Group__name)
+print(g._Group__size)
