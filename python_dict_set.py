@@ -1,6 +1,8 @@
-# dict字典使用键值对存储，在Java中类似Map
-score = {"Math": 90, "Chinese": 80, "English": 70, "Other": "your choice"}
+# dict字典使用键值对存储，在Java中类似Map;以下是两种创建dict的方式
+score = {'Math': 90, 'Chinese': 80, "English": 70, "Other": "your choice"}
 print(score)
+another = dict(name='NiferPitou', author='Hunter')
+print(another)
 # 两种取到value的方式
 print(score.get('English'))
 print(score['Math'])
