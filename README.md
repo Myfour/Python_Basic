@@ -20,3 +20,7 @@ Python基础
 - 匿名函数——python_lambda.py
 - 面向对象——python_OOP.py
 - 面向对象高级——python_higherOOP.py
+- 异常处理——python_error.py
+- 文件IO——python_IO.py
+- JSON处理——python_json.py
+- OS操作——python_os.py
