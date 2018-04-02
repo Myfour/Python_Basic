@@ -13,7 +13,7 @@ def add(x, y, f):
 print(add(-6, -5, abs))
 print('-----------------------')
 # Python内建了map()和reduce()函数
-# map()函数接收两个参数，一个是函数一个是Iterable对象，把结果作为一个Iterator返回
+# map()函数接收两个参数，一个是函数一个是Iterable对象，利用传入的函数对传入的Iterable对象逐个进行相应函数操作，把结果作为一个Iterator返回
 
 for x in map(abs, [1, 2, 4, -3, -5, -9]):
     print(x)
@@ -41,7 +41,8 @@ def upAndDown(x):
 
 print(list(map(upAndDown, L)))
 
-# filter()函数用于过滤序列，和map相似接收一个函数一个序列，filter会根据函数结果为true或false来决定返回的序列中保不保留值
+# filter()函数用于过滤序列，和map相似接收一个函数一个序列，filter会根据函数结果为true或false来决定返回的序列中保不保留值，
+# true的则返回回来结果
 print('---------------------')
 
 
@@ -63,7 +64,8 @@ def huiwen(x):
 
 print(list(filter(huiwen, ['11111', '121', '2332', '1324', '13131'])))
 
-# sorted()函数也是一个高阶函数，该函数可以直接对list进行排序，他还可以通过传入一个key函数来实现自定义排序
+# sorted()函数也是一个高阶函数，该函数可以直接对list进行排序；他还可以通过传入一个key函数来实现自定义排序，即根据
+# key函数的变换结果来排序
 
 print('------------------------')
 print(sorted([4, 2, 90, 5, 12, 44]))

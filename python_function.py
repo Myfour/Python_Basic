@@ -94,7 +94,7 @@ l2 = [1, 4, 5, 2, 3]
 print(add(*l2))
 
 
-# 关键字参数,会将**的参数封装成一个dict;调用函数时在dict前加**也可将其传入关键字参数中
+# 关键字参数,会将未详细定义的参数封装成一个dict;调用函数时在dict类型的对象前加**也可将其传入关键字参数中
 def person(name, age, **kw):
     print('name:', name, ',age:', age, ',other:', kw)
 
@@ -113,6 +113,7 @@ person1('show', 20, sex='nv', size='XL')
 
 
 # 参数中有可变参数也有命名关键字参数就不用额外加一个*
+# 以下例子中*girls就是一个可变参数，其后的参数为命名关键字参数
 def person2(name, age, *girls, size, number):
     print(name, age, girls, size, number)
 

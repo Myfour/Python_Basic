@@ -24,3 +24,4 @@ Python基础
 - 文件IO——python_IO.py
 - JSON处理——python_json.py
 - OS操作——python_os.py
+- StringIO和BytesIO——python_StringIOandBytesIO.py
