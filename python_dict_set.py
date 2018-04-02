@@ -29,9 +29,9 @@ s.remove('hehe')
 print(s)
 # set集合可做交集、并集的操作
 s2 = set([4, 5, 6])
-print(s & s2)
-print(s | s2)
-#
+print(s & s2)  # 交集
+print(s | s2)  # 并集
+# 字典的key是一个不可变的类型的值，如元组
 t1 = (1, 2)
 ss = {t1: 'a'}
 print(ss)
