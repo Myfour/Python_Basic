@@ -25,3 +25,7 @@ Python基础
 - JSON处理——python_json.py
 - OS操作——python_os.py
 - StringIO和BytesIO——python_StringIOandBytesIO.py
+- 正则表达式——python_regex.py
+- collections——python_collections.py
+- 时间日期——python_datetime.py
+- hashlib——python_hashlib.py
