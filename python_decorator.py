@@ -35,6 +35,29 @@ now1()
 print('------------------------')
 
 
+def requires_int(func):
+    def judge(*args, **kwargs):
+        args_list = [i for i in args]
+        kwargs_list = [i for i in kwargs.values()]
+        for arg in args_list + kwargs_list:
+            if not isinstance(arg, int):
+                raise TypeError('args must be intger')
+        return func(*args, **kwargs)
+
+    return judge
+
+
+@requires_int
+def get(x, y, gg, qq):
+    return 'This is get.....'
+
+
+print(get(12, 1, 99, 100))
+# print(get(gg='this is gg', x=12, y=33, qq=44))  # 上述装饰器实现判断参数必须为int类型
+
+print('------------------------')
+
+
 # 带参数的装饰器，相当于执行now=log(text)(now)
 def log(text):
     def decorator(func):
