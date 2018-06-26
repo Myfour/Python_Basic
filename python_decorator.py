@@ -58,7 +58,7 @@ print(get(12, 1, 99, 100))
 print('------------------------')
 
 
-# 带参数的装饰器，相当于执行now=log(text)(now)
+# 带参数的装饰器，相当于执行now=log(text)(now);带参数的装饰器实质是先用带参数的函数返回一个装饰器的引用，在内层才是真正的装饰器
 def log(text):
     def decorator(func):
         def wrapper(*args, **kw):
@@ -75,4 +75,10 @@ def ee():
     print('ee go')
 
 
+@log('intersting')
+def game():
+    print('game go')
+
+
 ee()
+game()
