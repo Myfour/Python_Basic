@@ -29,3 +29,4 @@ Python基础
 - collections——python_collections.py
 - 时间日期——python_datetime.py
 - hashlib——python_hashlib.py
+- 描述符——python_descriptor.py

@@ -39,6 +39,7 @@ print('--------------')
 # @property
 # @property 相当于一个getter方法，用于封装一个属性的getter方法，只不过这个getter方法的名字就是属性名
 # 使用了这个装饰器后就会生成一个setter方法的装饰器，@xxx.setter
+# 最简单的定义一个描述符的方式就是使用@property
 class AClass(object):
     @property
     def group(self):
